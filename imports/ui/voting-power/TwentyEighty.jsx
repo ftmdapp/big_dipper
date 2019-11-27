@@ -35,11 +35,11 @@ export default class TwentyEighty extends Component{
                                 bottomPercent
                             ],
                             backgroundColor: [
-                                '#bd081c',
+                                '#212c41',
                                 '#ff63c0'
                             ],
                             hoverBackgroundColor: [
-                                '#bd081c',
+                                '#212c41',
                                 '#ff63c0'
                             ]
                         }
@@ -50,7 +50,7 @@ export default class TwentyEighty extends Component{
                         callbacks: {
                             label: function(tooltipItem, data) {
                                 var label = data.labels[tooltipItem.index] || '';
-            
+
                                 if (label) {
                                     label += ' hold ';
                                 }
@@ -71,18 +71,18 @@ export default class TwentyEighty extends Component{
         }
         else{
             if (this.props.statsExist && this.props.stats){
-                return (                    
+                return (
                     <Card>
                         <div className="card-header"><T>votingPower.pareto</T></div>
                         <CardBody>
                             <Pie data={this.state.data} options={this.state.options} />
                         </CardBody>
                     </Card>
-                );   
+                );
             }
             else{
                 return <div></div>
             }
         }
     }
-}    
+}
